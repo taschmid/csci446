@@ -8,9 +8,15 @@
 </head>
 <body>
 
+<%- flash.each do |name, message| %>
+	<p><i><%= "#{name}: #{message}" %></i></p>
+<% end %>
+
 <h1>CSCI 100: Fun with Computers</h1>
 
 <%= yield %>
+
+<%= render "footer" %>
 
 </body>
 </html>

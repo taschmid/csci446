@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'course/scores'
+
   get 'course/announce'
 
   get 'course/eval'
