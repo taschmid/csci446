@@ -15,3 +15,9 @@ f.each_line do |line|
   Book.create(title: arr[0], author: arr[1].strip!, language: arr[2].strip!, year: arr[3], copies: arr[4])  
 end
 f.close
+
+Grocery.create(name: 'Apple', department: 'Fruit', price: 1)
+Grocery.create(name: 'Milk', department: 'Dairy', price: 4)
+Grocery.create(name: 'Bread', department: 'Bakery', price: 3)
+Grocery.create(name: 'Crackers', department: 'Snacks', price: 2)
+Grocery.create(name: 'Carrot', department: 'Vegetable', price: 1)
