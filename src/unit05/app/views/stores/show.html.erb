@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Store Name:</strong>
+  <%= @store.name %>
+</p>
+
+
+<table>
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>Department</th>
+			<th>Price</th>
+			<th>Inventory</th>
+		</tr>
+	</thead>
+
+	<tbody>
+
+	</tbody>
+</table>
+<br>
+<strong>Add New Grocery</strong>
+<br>
+<%= link_to 'groceries/form' %>
+
+<%= link_to 'Edit', edit_store_path(@store) %> |
+<%= link_to 'Back', stores_path %>

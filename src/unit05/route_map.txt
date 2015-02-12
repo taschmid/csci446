@@ -1,0 +1,65 @@
+-->Listing Stores
+	show, edit delete
+
+	new store button
+-->New Store
+	name field
+
+	create button
+
+	back button	
+-->Show Store
+	name
+
+	edit, back
+
+	list of groceries
+	new grocery
+-->Edit Store
+	name
+
+	update button
+	show, back
+-->Show grocery
+	edit delete
+-->Edit grocery
+	fields
+
+	update
+-->New Grocery
+	fields
+
+	create
+
+
+GET    /stores/:store_id/groceries(.:format)
+
+POST   /stores/:store_id/groceries(.:format)
+
+GET    /stores/:store_id/groceries/new(.:format)
+
+GET    /stores/:store_id/groceries/:id/edit(.:format)
+
+GET    /stores/:store_id/groceries/:id(.:format)
+
+PATCH  /stores/:store_id/groceries/:id(.:format)
+
+PUT    /stores/:store_id/groceries/:id(.:format)
+
+DELETE /stores/:store_id/groceries/:id(.:format)
+
+GET    /stores(.:format)
+
+POST   /stores(.:format)
+
+GET    /stores/new(.:format)
+
+GET    /stores/:id/edit(.:format)
+
+GET    /stores/:id(.:format)
+
+PATCH  /stores/:id(.:format)
+
+PUT    /stores/:id(.:format)
+
+DELETE /stores/:id(.:format)
