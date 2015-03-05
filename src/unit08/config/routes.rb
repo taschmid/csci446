@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :selected_pets
+
+  resources :carts
+
   get 'shelter' => 'shelter#index'
 
   resources :pets
