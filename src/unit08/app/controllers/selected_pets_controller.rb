@@ -1,4 +1,7 @@
 class SelectedPetsController < ApplicationController
+  include CurrentCart
+  
+  before_action :set_cart, only: [:create]
   before_action :set_selected_pet, only: [:show, :edit, :update, :destroy]
 
   # GET /selected_pets
@@ -24,11 +27,12 @@ class SelectedPetsController < ApplicationController
   # POST /selected_pets
   # POST /selected_pets.json
   def create
-    @selected_pet = SelectedPet.new(selected_pet_params)
+    pet = Pet.find(params[:pet_id])
+    @selected_pet = @cart.selected_pet.build(pet: pet)
 
     respond_to do |format|
       if @selected_pet.save
-        format.html { redirect_to @selected_pet, notice: 'Selected pet was successfully created.' }
+        format.html { redirect_to @selected_pet.cart, notice: 'Pet was selected' }
         format.json { render :show, status: :created, location: @selected_pet }
       else
         format.html { render :new }
