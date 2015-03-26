@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Unit08</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+
+<%= render "header" %>
+
+<body>
+
+<p id="flash">
+	<% flash.each do |name, message| %>
+		<p><i><%= "#{name}: #{message}" %></i></p>
+	<% end %>
+</p>
+
+<div id="columns">
+	<div id="content">
+		<%= content_for?(:content) ? yield(:content) : yield %>
+	</div>
+
+	<div id="otherStuff">
+		<%= yield %>
+	</div>
+</div>
+
+</body>
+
+<%= render "footer" %>
+
+</html>

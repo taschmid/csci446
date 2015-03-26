@@ -1,0 +1,27 @@
+// Place all the styles related to the shelter controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+#content {
+	position: relative;
+	float: left;
+	background-color: #75FF75;
+
+	tr:nth-child(odd) { 
+	background-color: #E6E6D5; 
+	}
+
+	tr:nth-child(even) { 
+		background-color: #E6E6D5; 
+	}
+
+	border: solid;
+	border-color: black;
+	padding: 3px;
+	margin: 20px;
+}
+
+#otherStuff {
+	position: relative;
+	float: left;
+	padding: 20px;
+}

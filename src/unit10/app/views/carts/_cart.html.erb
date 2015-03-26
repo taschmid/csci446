@@ -1,0 +1,17 @@
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Description</th>
+      <th>Pet Type</th>
+      <th colspan="4"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <%= render(cart.selected_pets) %>
+  </tbody>
+</table>
+
+<%= button_to 'Delete Cart', cart, method: :delete, data: { confirm: 'Are you sure?' } %>

@@ -1,0 +1,7 @@
+<tr>
+	<td><%= selected_pet.pet.name %></td>
+	<td><%= selected_pet.pet.age %></td>
+	<td><%= selected_pet.pet.description %></td>
+	<td><%= selected_pet.pet.pet_type %></td>
+	<td><%= button_to 'Remove', selected_pet, method: :delete, remote: true, data: {} %></td>
+</tr>
